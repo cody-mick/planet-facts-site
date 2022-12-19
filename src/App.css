@@ -1,0 +1,265 @@
+:root {
+	--white: #ffffff;
+	--dark-purple: #070724;
+	--gray-purple: #38384f;
+	--gray: #838391;
+	--cyan: #419ebb;
+	--gold: #eda249;
+	--purple: #6f2ed6;
+	--light-red: #d14c32;
+	--red: #d83a34;
+	--rust-orange: #cd5120;
+	--teal: #1ec2a4;
+	--blue: #2d68f0;
+
+	--antonio: "Antonio", sans-serif;
+	--spartan: "League Spartan", sans-serif;
+}
+
+html {
+	background: url("assets/background-stars.svg"), var(--dark-purple);
+	color: var(--white);
+}
+
+h1 {
+	font-family: var(--antonio);
+	font-size: 80px;
+	line-height: 103px;
+}
+
+h2 {
+	font-family: var(--antonio);
+	font-size: 40px;
+	line-height: 52px;
+	letter-spacing: -1.5;
+}
+
+h3 {
+	font-family: var(--spartan);
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 25px;
+	letter-spacing: 2.6;
+}
+
+h4 {
+	font-family: var(--spartan);
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 25px;
+	letter-spacing: 1px;
+}
+/* 
+p {
+	font-family: var(--spartan);
+} */
+
+a {
+	color: var(--gray);
+}
+
+/* NavBar */
+
+.nav-bar {
+	height: 85px;
+	border-bottom: 1px solid var(--gray);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-title {
+	width: 107px;
+	height: 36px;
+	margin-left: 32px;
+	font-family: "Antonio", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 36px;
+	letter-spacing: -1.05px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.planet-links {
+	display: flex;
+	flex-direction: row;
+	gap: 25px;
+	margin-right: 22px;
+}
+
+.planet-link {
+	font-family: "League Spartan", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 11px;
+	line-height: 25px;
+	letter-spacing: 1px;
+	color: var(--gray);
+	text-transform: uppercase;
+}
+
+.planet-link:hover {
+	cursor: pointer;
+}
+
+/* Planet Page */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+		"planet-image planet-image planet-name planet-name"
+		"planet-image planet-image planet-info planet-info"
+		"planet-image planet-image planet-info planet-info"
+		"planet-image planet-image planet-info-links planet-info-links"
+		"planet-facts planet-facts planet-facts planet-facts";
+	row-gap: 16px;
+}
+
+.planet-image {
+	grid-area: planet-image;
+	justify-self: center;
+	align-self: center;
+}
+
+.planet-info {
+	grid-area: planet-info;
+	justify-self: center;
+}
+
+.planet-info-text {
+	font-family: "League Spartan", sans-serif;
+	width: 350px;
+	height: 150px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 25px;
+	color: #ffffff;
+	grid-area: planet-info;
+}
+
+.planet-info-name {
+	width: 263px;
+	height: 104px;
+	font-family: "Antonio", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 80px;
+	line-height: 104px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.planet-info-source-link {
+	font-family: "League Spartan", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 25px;
+	color: #ffffff;
+	mix-blend-mode: normal;
+	opacity: 0.5;
+}
+
+.planet-info-links {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	grid-area: planet-info-links;
+	justify-self: center;
+}
+
+.planet-info-link {
+	width: 350px;
+	height: 48px;
+	border: 1px solid rgba(131, 131, 145, 0.2);
+	display: flex;
+	user-select: none;
+}
+
+.planet-info-link:hover {
+	cursor: pointer;
+}
+
+.planet-info-link-number {
+	position: relative;
+	left: 8%;
+	right: 86.86%;
+	height: 25px;
+	font-family: "League Spartan", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 25px;
+	letter-spacing: 2.57143px;
+	text-transform: uppercase;
+	color: #ffffff;
+	mix-blend-mode: normal;
+	opacity: 0.5;
+}
+
+.planet-info-link-title {
+	position: relative;
+	left: 21.14%;
+	right: 52.29%;
+	height: 25px;
+	font-family: "League Spartan", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 25px;
+	letter-spacing: 2.57143px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.planet-fact-cards {
+	display: flex;
+	justify-content: space-around;
+	grid-area: planet-facts;
+	margin-top: 87px;
+}
+
+.planet-fact-card {
+	border: 1px solid rgba(131, 131, 145, 0.2);
+	width: 255px;
+	height: 128px;
+}
+
+.planet-fact-title {
+	position: relative;
+	left: 9.02%;
+	right: 48.24%;
+	height: 25px;
+	top: calc(50% - 25px / 2 - 31.5px);
+	font-family: "League Spartan", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 11px;
+	line-height: 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #ffffff;
+	mix-blend-mode: normal;
+	opacity: 0.5;
+}
+
+.planet-fact-text {
+	margin-top: 0px;
+	position: relative;
+	left: 9.02%;
+	right: 40.78%;
+	height: 52px;
+	top: calc(50% - 52px / 2 + 11px);
+	font-family: "Antonio", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 52px;
+	letter-spacing: -1.5px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
