@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function PlanetInfoLink({ number, title }: any) {
+export default function PlanetInfoLink({ number, title, handleClick }: any) {
 	return (
-		<div className="planet-info-link">
+		<button className="planet-info-link" onClick={() => handleClick(title)}>
 			<p className="planet-info-link-number">{number}</p>
 			<p className="planet-info-link-title">{title}</p>
-		</div>
+		</button>
 	);
 }

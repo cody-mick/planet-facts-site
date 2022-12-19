@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PlanetInfo({ currentPlanet }: any) {
+export default function PlanetInfo({ currentPlanet, detailState }: any) {
 	return (
 		<div className="planet-info">
 			<p className="planet-info-name">{currentPlanet?.name}</p>

@@ -124,6 +124,14 @@ a {
 	align-self: center;
 }
 
+.surface-geology {
+	position: absolute;
+	width: 163px;
+	height: 199px;
+	left: 262px;
+	top: 500px;
+}
+
 .planet-info {
 	grid-area: planet-info;
 	justify-self: center;
@@ -178,6 +186,7 @@ a {
 	border: 1px solid rgba(131, 131, 145, 0.2);
 	display: flex;
 	user-select: none;
+	background: none;
 }
 
 .planet-info-link:hover {
