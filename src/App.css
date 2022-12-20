@@ -122,14 +122,18 @@ a {
 	grid-area: planet-image;
 	justify-self: center;
 	align-self: center;
+	display: flex;
+	flex-direction: column;
 }
 
 .surface-geology {
 	position: absolute;
 	width: 163px;
 	height: 199px;
-	left: 262px;
-	top: 500px;
+	grid-area: planet-image;
+	justify-self: center;
+	align-self: center;
+	margin-top: 205px;
 }
 
 .planet-info {
