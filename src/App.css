@@ -193,6 +193,15 @@ a {
 	background: none;
 }
 
+.planet-info-link-active {
+	width: 350px;
+	height: 48px;
+	border: 1px solid rgba(131, 131, 145, 0.2);
+	display: flex;
+	user-select: none;
+	background: red;
+}
+
 .planet-info-link:hover {
 	cursor: pointer;
 }

@@ -11,6 +11,8 @@ export default function PlanetImage({ currentPlanet, detailState }: any) {
 	if (detailState === "Surface Geology") {
 		image = currentPlanet.images.planet;
 	}
+	console.log(currentPlanet);
+	console.log(detailState);
 	return (
 		<div className="planet-image">
 			<img src={image} alt={currentPlanet.name} />

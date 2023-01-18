@@ -10,7 +10,7 @@ export default function PlanetPage({ activePlanet }: any) {
 	const planetsData = useAtom(planetAtom);
 	const planets = planetsData[0];
 	const currentPlanet = planets.find((p) => p.name === activePlanet);
-	const [planetState, setPlanetState] = useState("");
+	const [planetState, setPlanetState] = useState("Overview");
 	const handlePlanetDetailClick = (newPlanetState: any) => {
 		setPlanetState(newPlanetState);
 	};
@@ -30,16 +30,19 @@ export default function PlanetPage({ activePlanet }: any) {
 					number="01"
 					title="Overview"
 					handleClick={handlePlanetDetailClick}
+					active={planetState === "Overview" ? true : false}
 				/>
 				<PlanetInfoLink
 					number="02"
 					title="Internal Structure"
 					handleClick={handlePlanetDetailClick}
+					active={planetState === "Internal Structure" ? true : false}
 				/>
 				<PlanetInfoLink
 					number="03"
 					title="Surface Geology"
 					handleClick={handlePlanetDetailClick}
+					active={planetState === "Surface Geology" ? true : false}
 				/>
 			</div>
 			<div className="planet-fact-cards">

@@ -11,6 +11,7 @@ export default function NavBar({ onPlanetSelect }: any) {
 			<div className="planet-links">
 				{planets.map((p) => (
 					<p
+						key={p.name}
 						className="planet-link"
 						onClick={() => onPlanetSelect(p.name)}>
 						{p.name}
